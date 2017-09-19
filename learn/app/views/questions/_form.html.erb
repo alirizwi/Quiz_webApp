@@ -1,0 +1,52 @@
+<%= form_with(model: question, local: true) do |form| %>
+  <% if question.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(question.errors.count, "error") %> prohibited this question from being saved:</h2>
+
+      <ul>
+      <% question.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :quest %>
+    <%= form.text_field :quest, id: :question_quest %>
+  </div>
+
+  <div class="field">
+    <%= form.label :opta %>
+    <%= form.text_field :opta, id: :question_opta %>
+  </div>
+
+  <div class="field">
+    <%= form.label :optb %>
+    <%= form.text_field :optb, id: :question_optb %>
+  </div>
+
+  <div class="field">
+    <%= form.label :optc %>
+    <%= form.text_field :optc, id: :question_optc %>
+  </div>
+
+  <div class="field">
+    <%= form.label :optd %>
+    <%= form.text_field :optd, id: :question_optd %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ans %>
+    <%= form.text_field :ans, id: :question_ans %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sub_genre_id %>
+    <%= form.text_field :sub_genre_id, id: :question_sub_genre_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,47 @@
+<head>
+	<meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
+</head>
+<p id="notice"><%= notice %></p>
+
+<h1>Questions</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Question</th>
+      <th>Opta</th>
+      <th>Optb</th>
+      <th>Optc</th>
+      <th>Optd</th>
+      <th>Ans</th>
+      <th>Sub genre</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @questions.each do |question| %>
+      <tr>
+        <td><%= question.quest %></td>
+        <td><%= question.opta %></td>
+        <td><%= question.optb %></td>
+        <td><%= question.optc %></td>
+        <td><%= question.optd %></td>
+        <td><%= question.ans %></td>
+        <td><%= question.sub_genre.subgenrename %></td>
+	<td><%= link_to 'Show', question %></td>
+        <td><%= link_to 'Edit', edit_question_path(question) %></td>
+        <td><%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Question', new_question_path %>

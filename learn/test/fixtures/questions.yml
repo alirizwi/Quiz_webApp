@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  quest: MyString
+  opta: MyString
+  optb: MyString
+  optc: MyString
+  optd: MyString
+  ans: MyString
+  sub_genre: one
+
+two:
+  quest: MyString
+  opta: MyString
+  optb: MyString
+  optc: MyString
+  optd: MyString
+  ans: MyString
+  sub_genre: two
